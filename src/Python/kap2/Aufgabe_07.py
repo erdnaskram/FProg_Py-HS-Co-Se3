@@ -19,7 +19,7 @@ nthDay = day
 print(nthDay)
 month = month - 1
 
-if(month > 0):
+if month > 0:
     for x in range(month):
         nthDay = nthDay + getDaysPerMonth(month,year)
         print(nthDay)
