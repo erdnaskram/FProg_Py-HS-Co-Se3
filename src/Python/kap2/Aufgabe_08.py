@@ -1,12 +1,12 @@
 import random
 
-print('Willkommen im Tippspiel (Glückspiel kann süchtig machen...)')
+print('Willkommen im Tippspiel (Glücksspiel kann süchtig machen...)')
 
 z = random.randint(0, 9)
 tippRichtig = False
 trys = 0
 
-while tippRichtig == False and trys < 3:
+while not tippRichtig and trys < 3:
     trys = trys + 1
     tipp = int(input('geben sie einen Tipp ab!'))
 
