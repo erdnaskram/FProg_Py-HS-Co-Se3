@@ -1,14 +1,20 @@
 import copy
+
+
 def caesar_encode(sntc, dist):
-    alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+                'v', 'w', 'x', 'y', 'z']
     codetAlphabet = copy.deepcopy(alphabet)
     for i in range(len(alphabet)):
         z = i + dist
         if z > 25:
             z -= 26
         codetAlphabet[i] = alphabet[z]
+    for i in range(len(alphabet)):
+        alphabet.append(alphabet[i].upper())
+        codetAlphabet.append(codetAlphabet[i].upper())
 
-    sntc = sntc.lower()
+    # sntc = sntc.lower()
 
     res = ""
 
@@ -22,7 +28,8 @@ def caesar_encode(sntc, dist):
 
 
 def caesar_decode(sntc, dist):
-    alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+                'v', 'w', 'x', 'y', 'z']
     codetAlphabet = copy.deepcopy(alphabet)
     for i in range(len(alphabet)):
         z = i + dist
@@ -30,7 +37,11 @@ def caesar_decode(sntc, dist):
             z -= 26
         codetAlphabet[i] = alphabet[z]
 
-    sntc = sntc.lower()
+    for i in range(len(alphabet)):
+        alphabet.append(alphabet[i].upper())
+        codetAlphabet.append(codetAlphabet[i].upper())
+
+    # sntc = sntc.lower()
 
     res = ""
 
