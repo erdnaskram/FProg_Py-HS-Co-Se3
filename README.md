@@ -1,6 +1,6 @@
 <html lang="de">
     <div id="title">
-        <h1>FProg-HS-Co-Se3</h1>
+        <h1>FProg_Py-HS-Co-Se3</h1>
         <h5>Autor: erdnaskram</h5>
     </div>
     <div class="inhalt_box">
